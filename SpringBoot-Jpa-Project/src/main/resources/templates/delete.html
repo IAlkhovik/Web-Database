@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Delete a Person</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+	<style>
+		.center {
+		  margin: 0;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  -ms-transform: translate(-50%, -50%);
+		  transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+<body>
+	<div class="container text-center center">
+		<div class="row">
+			<h1>Delete a Person</h1>
+		</div>
+		<div class="row">
+			<h4>List of all people in the database:</h4>
+		</div>
+		<div class="row">
+			<tr th:each="message : ${output}">
+				<p>ID: <td th:text="${message.id}"></td>, FIRST NAME: <td th:text="${message.firstName}"></td>, LAST NAME: <td th:text="${message.lastName}"></td>, AGE: <td th:text="${message.age}"></td>, OCCUPATION: <td th:text="${message.occupation}"></td></p>
+	    	</tr>
+    	</div>
+	    <div class="row">
+			<div class="col-3"></div>
+			<div class="col-6">
+				<h4>Enter the id of the person you want to remove from the database.</h4>
+			</div>
+			<div class="col-3"></div>
+		</div>
+		<div class="row">
+		    <form th:action="@{/delete}" method="post">
+		    	<p>Id: <input type="number" th:value="${id}" name="id"/></p>
+		        <p>
+					<input type="submit" value="Delete" /> 
+		        	<input type="reset" value="Reset" /></p>
+		    </form>
+	    </div>
+	    <div class="row">
+	    	<a th:href="@{http://localhost:8080/home}"><button>Go Back Home</button></a>
+    	</div>
+    </div>
+</body>
+</html>
