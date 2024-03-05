@@ -4,6 +4,6 @@ This is an ongoing project for the development of the following skills: Spring B
 
 A pdf depicting the user screens is uploaded at SpringBoot Jpa PDF.pdf.
 
-###Version Notes
+### Version Notes
 
 V1: User can add, remove, and search all entries freely.
