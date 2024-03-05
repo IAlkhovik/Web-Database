@@ -6,4 +6,4 @@ A pdf depicting the user screens is uploaded at SpringBoot Jpa PDF.pdf.
 
 ### Version Notes
 
-V1: User can add, remove, and search all entries freely.
+V1.0: User can add, remove, and search all entries freely.
