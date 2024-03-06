@@ -47,6 +47,14 @@
 	    <div class="row">
 	    	<a th:href="@{http://localhost:8080/home}"><button>Go Back Home</button></a>
     	</div>
+    	<div class="row">
+	    	<br>
+    	</div>
+    	<div class="row">
+	    	<form th:action="@{/logout}" method="post">
+            	<div><input type="submit" value="Logout"/></div>
+        	</form>
+    	</div>
     </div>
 </body>
 </html>
