@@ -7,3 +7,5 @@ A pdf depicting the user screens is uploaded at SpringBoot Jpa PDF.pdf.
 ### Version Notes
 
 V1.0: User can add, remove, and search all entries freely.
+
+V2.0: A user must login into an admin account (currently a default made one) to be able to delete entries from the database.
